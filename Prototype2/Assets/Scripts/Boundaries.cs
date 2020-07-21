@@ -13,8 +13,8 @@ public class Boundaries : MonoBehaviour
     private void Start()
     {
         screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
-        objectBounds.x = objRenderer.bounds.size.x / 2f;
-        objectBounds.y = objRenderer.bounds.size.y / 2f;
+        objectBounds.x = objRenderer.bounds.extents.x;
+        objectBounds.y = objRenderer.bounds.extents.y;
     }
 
     private void LateUpdate()
