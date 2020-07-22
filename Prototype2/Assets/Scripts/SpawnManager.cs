@@ -19,5 +19,4 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0f, spawnPosZ);
         Instantiate(spawnableAnimals[index], spawnPosition, spawnableAnimals[index].transform.rotation);
     }
-
 }
