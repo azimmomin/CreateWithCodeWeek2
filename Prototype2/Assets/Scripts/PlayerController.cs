@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.right * (horizontalInput * Time.deltaTime * speed));
 
         if (Input.GetKeyDown(KeyCode.Space))
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        {
+            Vector3 spawnPosition = transform.position;
+            spawnPosition.y = projectilePrefab.transform.position.y;
+            Instantiate(projectilePrefab, spawnPosition, projectilePrefab.transform.rotation);
+        }
     }
 }

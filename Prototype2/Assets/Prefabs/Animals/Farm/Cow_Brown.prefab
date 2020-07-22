@@ -352,8 +352,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3500887052665542142}
   - component: {fileID: 3500887052658089916}
-  - component: {fileID: 114392176834783764}
-  - component: {fileID: 114363633582552280}
+  - component: {fileID: 3420563406959102479}
+  - component: {fileID: 8650309366949150507}
+  - component: {fileID: 2488178628039270773}
   m_Layer: 0
   m_Name: Cow_Brown
   m_TagString: Untagged
@@ -395,20 +396,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114392176834783764
-MonoBehaviour:
+--- !u!65 &3420563406959102479
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3500887052665239868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6621b50e7e05546d58e6e71da639a1e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &114363633582552280
+  serializedVersion: 2
+  m_Size: {x: 10, y: 35, z: 50}
+  m_Center: {x: 0, y: 17, z: 0}
+--- !u!114 &8650309366949150507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,6 +422,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boundsOffset: {x: 10, y: 10}
+--- !u!114 &2488178628039270773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500887052665239868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6621b50e7e05546d58e6e71da639a1e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &3500887052665244982
 GameObject:
   m_ObjectHideFlags: 0
