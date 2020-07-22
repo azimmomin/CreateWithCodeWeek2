@@ -420,8 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23b5561779c04a25bf22bb5e37d074e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topBound: 30
-  bottomBound: -10
+  boundsOffset: {x: 10, y: 10}
 --- !u!1 &3500887052665244982
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,16 +22,4 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
     }
-
-    private void LateUpdate()
-    {
-        Vector3 playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        playerScreenPosition.x = Mathf.Clamp(
-            playerScreenPosition.x,
-            Screen.width / deadZoneFraction,
-            Screen.width - (Screen.width / deadZoneFraction)
-        );
-
-        transform.position = Camera.main.ScreenToWorldPoint(playerScreenPosition);
-    }
 }
