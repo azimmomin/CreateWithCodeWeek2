@@ -10,6 +10,6 @@ public class MoveForward : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * (Time.deltaTime * speed));
+        transform.Translate(transform.InverseTransformDirection(transform.forward) * (Time.deltaTime * speed));
     }
 }

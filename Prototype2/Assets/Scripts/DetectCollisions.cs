@@ -1,19 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    public static Action OnPlayerHit;
+    public static Action OnPlayerMissed;
+
+    public static Action OnAnimalFed;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Animal") && other.CompareTag("PlayerProjectile") ||
-            gameObject.CompareTag("PlayerProjectile") && other.CompareTag("Animal"))
+        if (gameObject.CompareTag("Animal") && other.CompareTag("PlayerProjectile"))
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
+            OnAnimalFed?.Invoke();
         }
-        else if (gameObject.CompareTag("GameOverTrigger") && other.CompareTag("Animal") ||
-            gameObject.CompareTag("Animal") && other.CompareTag("GameOverTrigger"))
+        else if (gameObject.CompareTag("Animal") && other.CompareTag("GameOverTrigger"))
         {
-            Debug.Log("Game Over");
+            OnPlayerMissed?.Invoke();
+        }
+        else if (gameObject.CompareTag("Animal") && other.CompareTag("Player"))
+        {
+            OnPlayerHit?.Invoke();
         }
     }
 }

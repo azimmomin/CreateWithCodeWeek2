@@ -464,8 +464,11 @@ MonoBehaviour:
   - {fileID: 1664848683614366983, guid: 1c64d1e202eb5478892a1f840e5299ac, type: 3}
   - {fileID: 6627258009987435492, guid: 1fb0992f1de94411481b7db52fc1a9af, type: 3}
   - {fileID: 3500887052665239868, guid: e1d6be716d5d443d8a87767283e80d57, type: 3}
-  spawnRangeX: 20
-  spawnPosZ: 20
+  spawnRangeX: 10
+  spawnRangeZ: 10
+  spawnPosLeft: -15
+  spawnPosRight: 15
+  spawnPosTop: 20
   spawnStartDelay: 2
   spawnInterval: 1.5
 --- !u!1 &992285705
@@ -639,26 +642,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590138454}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1909189908 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5343107344195783416, guid: 0feb2e4ff8d36438aabc0e604f8f99f9,
-    type: 3}
-  m_PrefabInstance: {fileID: 5343107346058050569}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1909189909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909189908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbadb035a5c12410d88e837f4e640c88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boundX: 1
-  boundY: 0
 --- !u!1001 &5343107346058050569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -669,11 +652,6 @@ PrefabInstance:
     - target: {fileID: 5343107344195783416, guid: 0feb2e4ff8d36438aabc0e604f8f99f9,
         type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343107344195783416, guid: 0feb2e4ff8d36438aabc0e604f8f99f9,
-        type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5343107344196015832, guid: 0feb2e4ff8d36438aabc0e604f8f99f9,
@@ -689,7 +667,7 @@ PrefabInstance:
     - target: {fileID: 5343107344196015832, guid: 0feb2e4ff8d36438aabc0e604f8f99f9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.61
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 5343107344196015832, guid: 0feb2e4ff8d36438aabc0e604f8f99f9,
         type: 3}
