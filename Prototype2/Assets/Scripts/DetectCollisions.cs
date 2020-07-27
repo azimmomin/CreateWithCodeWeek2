@@ -10,13 +10,8 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Animal") && other.CompareTag("PlayerProjectile"))
-        {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
-            OnAnimalFed?.Invoke();
-        }
-        else if (gameObject.CompareTag("Animal") && other.CompareTag("GameOverTrigger"))
+
+        if (gameObject.CompareTag("Animal") && other.CompareTag("GameOverTrigger"))
         {
             OnPlayerMissed?.Invoke();
         }

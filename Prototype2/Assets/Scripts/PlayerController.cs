@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         DetectCollisions.OnPlayerHit += DecreaseLife;
         DetectCollisions.OnPlayerMissed += DecreaseLife;
-        DetectCollisions.OnAnimalFed += IncreaseScore;
+        AnimalHealth.OnAnimalFull += IncreaseScore;
     }
 
     private void DecreaseLife()
@@ -75,6 +75,6 @@ public class PlayerController : MonoBehaviour
     {
         DetectCollisions.OnPlayerHit -= DecreaseLife;
         DetectCollisions.OnPlayerMissed -= DecreaseLife;
-        DetectCollisions.OnAnimalFed -= IncreaseScore;
+        AnimalHealth.OnAnimalFull -= IncreaseScore;
     }
 }
